@@ -134,7 +134,7 @@ def add_handlers(web_app, config):
 
     public_url = data['jupyterlab']['publicPath']
     config.version = config.version or data['version']
-    config.name = config.name or data['name']
+    config.name = config.name or data['jupyterlab']['name']
 
     handlers = [
         (url + r'/?', LabHandler, {
