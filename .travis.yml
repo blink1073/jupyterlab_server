@@ -7,4 +7,4 @@ install:
     - pip install setuptools pip --upgrade
     - pip install -v -e ".[test]"
 script:
-    - py.test -s -v
+    - py.test -s -v  # verbose
