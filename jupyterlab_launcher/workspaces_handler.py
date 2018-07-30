@@ -6,7 +6,10 @@ import json
 import os
 from tornado import web
 
-from notebook.base.handlers import APIHandler, json_errors
+try:
+    from notebook.base.handlers import APIHandler, json_errors
+except ImportError:
+    from jupyter_server.base.handlers import APIHandler, json_errors
 
 
 _file_extension = '.jupyterlab-workspace'
